@@ -66,9 +66,10 @@ python.exe -m pip install -r requirements.txt
 Start the FastAPI application using Uvicorn:
 
 ```bash
+cd computer_vision_example/
+
 uvicorn app:app --workers 4 --reload
 
-cd computer_vision_example/index.html
 python -m http.server 8001
 ``` 
 
