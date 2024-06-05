@@ -1,36 +1,32 @@
-name: Upload coverage to Codecov
+name: Codecov Umbrella Report
 
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
-  codecov:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-
+      - uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v3
         with:
           python-version: '3.11'
-
       - name: Install dependencies
-        run: |
+        run: | 
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run Tests and Generate Coverage Report
-        run: |
+        run: | 
           pip install coverage pytest-cov
           coverage run -m pytest
-              coverage report
-              coverage xml
+          coverage report
+          coverage xml
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
