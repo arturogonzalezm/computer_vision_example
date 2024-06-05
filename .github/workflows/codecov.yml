@@ -1,4 +1,4 @@
-name: Codecov Umbrella Report
+name: Code Quality and Testing
 
 on:
   push:
@@ -35,3 +35,11 @@ jobs:
           flags: unittests
           name: codecov-umbrella
           failCiOnError: true
+      - name: Install additional dependencies
+        run: | 
+          pip install pylint
+      - name: Code Review Scoring
+        run: find . -name '*.py' -print -exec pylint {} \;
+      - name: Analysing the code with PyLint
+        run: | 
+          pylint $(find . -name '*.py') --fail-under=8.0
