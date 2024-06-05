@@ -3,10 +3,10 @@ name: Code Quality and Testing
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -39,7 +39,10 @@ jobs:
         run: |
           pip install pylint
       - name: Code Review Scoring
-        run: find . -name '*.py' -print -exec pylint {} \;
+        run: |
+          conda activate real_estate_broker_python
+          find . -name '*.py' -exec pylint {} \;
+        shell: bash -l {0}
       - name: Analysing the code with PyLint
         run: |
           pylint $(find . -name '*.py') --fail-under=8.0
