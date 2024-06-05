@@ -1,5 +1,5 @@
 [![codecov](https://codecov.io/gh/arturogonzalezm/computer_vision_example/graph/badge.svg?token=2VZXVTNCS0)](https://codecov.io/gh/arturogonzalezm/computer_vision_example)
-[![PyLint](https://github.com/arturogonzalezm/computer_vision_example/actions/workflows/pylint.yml/badge.svg)](https://github.com/arturogonzalezm/computer_vision_example/actions/workflows/pylint.yml)
+[![PyLint](https://github.com/arturogonzalezm/computer_vision_example/actions/workflows/codecov.yml/badge.svg)](https://github.com/arturogonzalezm/computer_vision_example/actions/workflows/codecov.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/arturogonzalezm/computer_vision_example/blob/master/LICENSE)
 
 # WebSocket Video Streaming Service
