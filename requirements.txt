@@ -9,3 +9,8 @@ pytest-cov
 coverage
 ruff
 pytest-mock
+anyio
+pytest-asyncio
+pytest-tornasync
+pytest-trio
+pytest-twisted
